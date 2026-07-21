@@ -178,6 +178,14 @@
         </section>
 
         <section id="booking-section" class="py-12 px-6 max-w-3xl mx-auto border-t border-gray-100">
+            <div class="flex justify-center space-x-4 mb-6">
+                <button onclick="openModal('policyModal')" style="background-color: #d75aed;" class="text-white text-xs uppercase tracking-widest px-6 py-3 rounded-full font-semibold hover:opacity-90 transition cursor-pointer">
+                    Policy
+                </button>
+                <button onclick="openModal('priceListModal')" style="background-color: #d75aed;" class="text-white text-xs uppercase tracking-widest px-6 py-3 rounded-full font-semibold hover:opacity-90 transition cursor-pointer">
+                    Price List
+                </button>
+            </div>
             <div class="bg-pink-50 p-8 rounded-xl border border-gray-200 shadow-xs">
                 <div class="text-center mb-6">
                     <h2 class="text-2xl font-semibold serif-font mb-2">Instant Booking Panel</h2>
@@ -303,7 +311,13 @@
                 <div>
                     <h3 class="font-bold text-sm uppercase tracking-wider mb-3 serif-font">Our Location</h3>
                     <p class="text-sm text-gray-700">
-                        Pretoria, South Africa
+                        Ext Y, 46 Thutaboagi Street, Soshanguve - MM, Soshanguve, 0152
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-3 serif-font">Working Hours</h3>
+                    <p class="text-sm text-gray-700">
+                        Mon-Sat 10am - 4pm
                     </p>
                 </div>
                 <div>
@@ -323,7 +337,7 @@
             </div>
             <div class="w-full h-64 md:h-full min-h-[280px] rounded-lg overflow-hidden shadow-xs border border-gray-200">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.326880026217!2d28.0145293!3d-25.9904253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95773ca28fc2c3%3A0xe21262d29497e7!2s50%20Mulbarton%20Rd%2C%20Beverley%2C%20Sandton%2C%202062!5e0!3m2!1sen!2sza!4v1710000000000!5m2!1sen!2sza" 
+                    src="https://maps.google.com/maps?q=Ext%20Y,%2046%20Thutaboagi%20Street,%20Soshanguve%20-%20MM,%20Soshanguve,%200152&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 
@@ -354,7 +368,7 @@
                 <div>
                     <h4 class="font-semibold text-xs uppercase mb-3">Information</h4>
                     <p class="text-xs text-gray-500 leading-relaxed">
-                        Pretoria, South Africa.<br>
+                        Ext Y, 46 Thutaboagi Street, Soshanguve - MM, Soshanguve, 0152.<br>
                         Strictly appointment booking frameworks only.
                         No walk-ins.
                     </p>
@@ -371,6 +385,20 @@
 
     <div class="bg-black text-white text-center py-8 overflow-hidden select-none">
         <span class="text-5xl md:text-[8rem] font-bold tracking-widest serif-font opacity-90 block leading-none uppercase">KARABO BEAUTY</span>
+    </div>
+
+    <div id="policyModal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-3xl w-full bg-white rounded-lg overflow-hidden shadow-2xl">
+            <button onclick="closeModal('policyModal')" class="absolute top-2 right-2 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg cursor-pointer z-10">&times;</button>
+            <img src="policy.jpg" alt="Policy" class="w-full max-h-[85vh] object-contain mx-auto">
+        </div>
+    </div>
+
+    <div id="priceListModal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-3xl w-full bg-white rounded-lg overflow-hidden shadow-2xl">
+            <button onclick="closeModal('priceListModal')" class="absolute top-2 right-2 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg cursor-pointer z-10">&times;</button>
+            <img src="pricelist.jpg" alt="Price List" class="w-full max-h-[85vh] object-contain mx-auto">
+        </div>
     </div>
 
     <script>
@@ -407,6 +435,15 @@
                     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }, 50);
+        }
+
+        // MODAL DISPLAY LOGIC FOR POLICY AND PRICE LIST
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
         }
 
         // WHATSAPP APPOINTMENT PROCESSING

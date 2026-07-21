@@ -53,7 +53,7 @@
     </header>
 
     <main id="home-view" class="page-view active-view">
-        <section class="relative py-24 px-8 md:px-16 flex flex-col md:flex-row items-center justify-between min-h-[550px] overflow-hidden bg-black text-white">
+        <section class="relative py-24 px-8 md:px-16 flex flex-col-reverse md:flex-row items-center justify-between min-h-[550px] overflow-hidden bg-black text-white">
             <video class="video-bg active" autoplay loop muted playsinline>
                 <source src="video01.mp4" type="video/mp4">
             </video>
@@ -66,7 +66,7 @@
 
             <div class="absolute inset-0 bg-black/40 z-10"></div>
 
-            <div class="max-w-xl space-y-6 relative z-20">
+            <div class="max-w-xl space-y-6 relative z-20 mt-8 md:mt-0">
                 <h1 class="text-4xl md:text-6xl font-light serif-font leading-tight">
                     Sets for Every<br><span class="italic">Summer Plan</span>
                 </h1>
@@ -80,7 +80,7 @@
                     <p class="text-xs tracking-wider font-semibold block pt-2">WhatsApp for appointments: <a href="https://wa.me/27673577221" target="_blank" class="underline">067 357 7221</a></p>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 flex justify-center mt-8 md:mt-0 relative z-20">
+            <div class="w-full md:w-1/2 flex justify-center relative z-20">
                 <img src="logo.jpg" alt="Karabo Beauty Logo" class="w-72 h-72 object-cover rounded-full border border-white/20 shadow-xl">
             </div>
         </section>
@@ -389,14 +389,14 @@
 
     <div id="policyModal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4">
         <div class="relative max-w-3xl w-full bg-white rounded-lg overflow-hidden shadow-2xl">
-            <button onclick="closeModal('policyModal')" class="absolute top-2 right-2 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg cursor-pointer z-10">&times;</button>
+            <button onclick="closeModal('policyModal')" class="absolute top-2 right-2 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg cursor-pointer z-10">×</button>
             <img src="policy.jpg" alt="Policy" class="w-full max-h-[85vh] object-contain mx-auto">
         </div>
     </div>
 
     <div id="priceListModal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4">
         <div class="relative max-w-3xl w-full bg-white rounded-lg overflow-hidden shadow-2xl">
-            <button onclick="closeModal('priceListModal')" class="absolute top-2 right-2 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg cursor-pointer z-10">&times;</button>
+            <button onclick="closeModal('priceListModal')" class="absolute top-2 right-2 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg cursor-pointer z-10">×</button>
             <img src="pricelist.jpg" alt="Price List" class="w-full max-h-[85vh] object-contain mx-auto">
         </div>
     </div>
